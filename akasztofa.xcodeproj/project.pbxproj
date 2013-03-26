@@ -28,6 +28,9 @@
 		DB96248816383F8600207475 /* akasztofa */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = akasztofa; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB96248C16383F8600207475 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		DB96248E16383F8600207475 /* akasztofa.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = akasztofa.1; sourceTree = "<group>"; };
+		DBE2EF0D164FA1E900EE3C5E /* kommunikacio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kommunikacio.h; path = akasztofa/kommunikacio.h; sourceTree = "<group>"; };
+		DBE2EF0F164FA20E00EE3C5E /* szokezeles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = szokezeles.h; path = akasztofa/szokezeles.h; sourceTree = "<group>"; };
+		DBE2EF10164FA22300EE3C5E /* beolvasas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = beolvasas.h; path = akasztofa/beolvasas.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,9 @@
 		DB96247D16383F8600207475 = {
 			isa = PBXGroup;
 			children = (
+				DBE2EF0D164FA1E900EE3C5E /* kommunikacio.h */,
+				DBE2EF10164FA22300EE3C5E /* beolvasas.h */,
+				DBE2EF0F164FA20E00EE3C5E /* szokezeles.h */,
 				DB96248B16383F8600207475 /* akasztofa */,
 				DB96248916383F8600207475 /* Products */,
 			);
@@ -180,6 +186,7 @@
 		DB96249316383F8600207475 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -187,6 +194,7 @@
 		DB96249416383F8600207475 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -210,6 +218,7 @@
 				DB96249416383F8600207475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
