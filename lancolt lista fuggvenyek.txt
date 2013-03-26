@@ -1,0 +1,55 @@
+/*lancolt lista megoldas*/
+
+/*lista definialasa*/
+typedef struct szolista {
+    char *szo;
+    struct szolista *kov;
+    
+} szolista;
+
+/*hozzafuzo fuggveny*/
+int hanyszovan = 0; //globalis valtozo a lista elemszamanak tarolasara
+
+szolista *hozzafuz(szolista *eleje,char *mit){
+    szolista *mozgo, *uj;
+     ++hanyszovan;
+    if ( (uj=(szolista*) malloc(sizeof(szolista))) == NULL ) return NULL;
+    uj->szo=(char *) malloc(strlen(mit)*sizeof(char)); //malloc visszatereset még le kell kezelni!
+    strcpy(uj->szo,mit);
+    uj->kov=NULL;
+    
+    if (eleje==NULL)     /* üres lista? */
+        return uj;
+    
+    for (mozgo=eleje; mozgo->kov!=NULL; mozgo=mozgo->kov)
+        ; /* üres ciklus */
+    mozgo->kov=uj;
+   
+    return eleje;
+
+}
+
+/*veletlen szo valasztasa*/
+char *veletlen(szolista *eleje,int db){
+    srand ( time(NULL) );
+    int i,hanyadik = rand()%db + 1;
+    szolista *mozgo = eleje;
+    char *randomszo;
+    i=0;
+    while (i != hanyadik) {
+        randomszo = mozgo->szo;
+        mozgo = mozgo->kov;
+        ++i;
+    }
+    return randomszo;
+    
+}
+
+/*felszabaditas*/
+void szabadit(szolista *eleje){
+    while (eleje!=NULL) {
+        szolista *temp=eleje->kov; 
+        free(eleje);
+        eleje=temp;
+    }
+}

@@ -1,0 +1,27 @@
+“Akasztófa” program specifikáció
+Szombathelyi Péter
+NZH
+
+A programnak kétféle bemenete lesz. Az első a szótár fájl beolvasása, és eltárolása. A második bemeneti típus pedig az interakció a felhasználóval.
+
+A fájl-t felsorolt típusban gondoltam eltárolni. Ez elég dinamikusan kezelhető a szavak számának változása esetén, és az egyes szavaknak önmaguk jelentésén kívül nincs más rögzítendő tulajdonságuk. 
+
+Az interakció a felhasználóval pedig a szokott módon történne, konzolra írással.
+
+A program kimenete magában foglalja a megfelelő jelzéseket rossz-jó, esetleg hibás(már szerepelt) betűtipp esetén, és ennek függvényében szerkeszti újra a kitalálandó szót.
+
+A program működése:
+Szótár fájl feldolgozása, tárolása
+A megadott szóhossz szerint egy véletlenszerű szó kiválasztása
+A betűk felcserélése “_” karakterekkel, és ezek kirajzolása a képernyőre.
+Ciklus a találgatáshoz, a 
+3 féle esemény megkülönböztetése és azokhoz megfelelő módosítások elvégzése, újra kirajzolás.
+A háromféle esemény közül egynek teljesülnie kell.
+Rossz tipp: Nem módosítunk a kimeneten.
+Jó tipp: A megfelelő helyre beillesztjük a betűt/ket.
+Hibás tipp: Rögzíteni kell, hogy milyen betűket tippelt eddig a felhasználó, és ha ismételne, jelezni.
+A ciklusból akkor léphetünk ki,
+ha a felhasználó megszakítja a játék futását
+kitalálta a szót
+
+

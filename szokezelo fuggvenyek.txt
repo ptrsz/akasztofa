@@ -1,0 +1,54 @@
+/*szokezelo fuggvenyek*/
+int vane(char mi,char *miben){
+    int i;
+    for (i=0; i<strlen(miben); i++) {
+        if (mi == miben[i]) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int kitalalta (char *szo,char *voltak){
+    int i,j,k=0;
+    char ellenorzo[strlen(szo)];
+    
+    /*ellenorzo tomb feltoltese*/
+    for (i=0; i<strlen(szo); i++) {
+        ellenorzo[i] = '*';
+    }
+    
+    /*modositasa*/
+    for (i=0; i<strlen(szo); i++) {
+        for (j=0; j<strlen(voltak); j++) {
+            if (szo[i] == voltak[j]) {
+                ellenorzo[k]='-';
+                k++;
+            }
+        }
+    }
+    
+    /*tenyleges visszateres*/
+    for (i=0; i<strlen(szo); i++) {
+        if (ellenorzo[i] == '*') {
+            return 0;
+        }
+    }
+    return 1;
+    
+}
+
+void rajz(char *szo, char *voltak){
+    int i,j,volt;
+    for (i=0; i < strlen(szo); i++) {
+        volt = 1;
+        for (j=0; j< strlen(voltak); j++) {
+            if (szo[i] == voltak[j]) {
+                printf("%c ",voltak[j]);
+                volt = 0;
+            }
+        }
+        if (volt == 1) printf("_ ");
+    }
+    
+}

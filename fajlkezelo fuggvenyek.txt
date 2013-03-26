@@ -1,0 +1,53 @@
+/*fajlkezelo fuggvenyek*/
+void kiszed(char *innen, char *ide, int ennyit, int betuszam){
+    FILE *fp;
+    char olvas[25];
+    fp = fopen(innen,"rt");
+    while (fscanf(fp, "%s",&olvas) != EOF) {
+        if (strlen(olvas) == betuszam) {
+            strcat(ide,olvas);
+        }
+    }
+    
+}
+
+int mennyi(char *fajlnev, int betuszam){
+    FILE *fp ;
+    fp = fopen(fajlnev,"rt");
+    //megszamolom a betuszamnak megfelelo szavakat
+    int mennyi =0;
+    char puff[25]; /*maximum 25 szavas betuket szamolok, hiba?*/
+    while (fscanf(fp,"%s",&puff) != EOF) {
+        if (strlen(puff) == betuszam){
+            ++mennyi;
+        }
+    }
+    fclose(fp);
+    return mennyi;
+}
+
+char *fajlbeolvas(char *fajlnev, int betuszam ){
+    FILE *fp ;
+    fp = fopen(fajlnev,"rt");
+    //megszamolom a betuszamnak megfelelo szavakat
+    int mennyi =0;
+    char puff[25];
+    while (fscanf(fp,"%s",&puff) != EOF) {
+        if (strlen(puff) == betuszam){
+            ++mennyi;
+        }
+    }
+    //lefoglalok a nagy stringnek megfelelo memoriateruletet
+    char *string;
+    char paff[25];
+    FILE *fd;
+    fd = fopen(fajlnev, "rt"); //nem tudom kitisztitani a *fp tartalmat, ezert ijat hozok letre
+    string = (char*) malloc(mennyi*(sizeof(double)));
+    while (fscanf(fd,"%s",&paff) != EOF) {
+        if (strlen(paff) == betuszam){
+            strcat(string, paff);
+        }
+    }
+    return string;
+ 
+}
