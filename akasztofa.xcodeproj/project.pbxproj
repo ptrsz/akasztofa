@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB96248D16383F8600207475 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DB96248C16383F8600207475 /* main.c */; };
-		DB96248F16383F8600207475 /* akasztofa.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB96248E16383F8600207475 /* akasztofa.1 */; };
+		DBD72EC71701AEBE00963462 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DBD72EC61701AEBE00963462 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +17,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				DB96248F16383F8600207475 /* akasztofa.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -26,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		DB96248816383F8600207475 /* akasztofa */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = akasztofa; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB96248C16383F8600207475 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		DB96248E16383F8600207475 /* akasztofa.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = akasztofa.1; sourceTree = "<group>"; };
-		DBE2EF0D164FA1E900EE3C5E /* kommunikacio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kommunikacio.h; path = akasztofa/kommunikacio.h; sourceTree = "<group>"; };
-		DBE2EF0F164FA20E00EE3C5E /* szokezeles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = szokezeles.h; path = akasztofa/szokezeles.h; sourceTree = "<group>"; };
-		DBE2EF10164FA22300EE3C5E /* beolvasas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = beolvasas.h; path = akasztofa/beolvasas.h; sourceTree = "<group>"; };
+		DBD72EC61701AEBE00963462 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = source/main.c; sourceTree = SOURCE_ROOT; };
+		DBD72EC81701AECD00963462 /* beolvasas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = beolvasas.h; path = source/beolvasas.h; sourceTree = "<group>"; };
+		DBD72EC91701AECD00963462 /* kommunikacio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = kommunikacio.h; path = source/kommunikacio.h; sourceTree = "<group>"; };
+		DBD72ECA1701AECD00963462 /* szokezeles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = szokezeles.h; path = source/szokezeles.h; sourceTree = "<group>"; };
+		DBD72ECB1701AF4C00963462 /* szotar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = szotar.txt; path = szotar/szotar.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,11 +45,12 @@
 		DB96247D16383F8600207475 = {
 			isa = PBXGroup;
 			children = (
-				DBE2EF0D164FA1E900EE3C5E /* kommunikacio.h */,
-				DBE2EF10164FA22300EE3C5E /* beolvasas.h */,
-				DBE2EF0F164FA20E00EE3C5E /* szokezeles.h */,
+				DBD72EC81701AECD00963462 /* beolvasas.h */,
+				DBD72EC91701AECD00963462 /* kommunikacio.h */,
+				DBD72ECA1701AECD00963462 /* szokezeles.h */,
 				DB96248B16383F8600207475 /* akasztofa */,
 				DB96248916383F8600207475 /* Products */,
+				DBD72ECB1701AF4C00963462 /* szotar.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +65,7 @@
 		DB96248B16383F8600207475 /* akasztofa */ = {
 			isa = PBXGroup;
 			children = (
-				DB96248C16383F8600207475 /* main.c */,
-				DB96248E16383F8600207475 /* akasztofa.1 */,
+				DBD72EC61701AEBE00963462 /* main.c */,
 			);
 			path = akasztofa;
 			sourceTree = "<group>";
@@ -123,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB96248D16383F8600207475 /* main.c in Sources */,
+				DBD72EC71701AEBE00963462 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

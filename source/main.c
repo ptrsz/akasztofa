@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include <kommunikacio.h>
-#include <szokezeles.h>
-#include <beolvasas.h>
+#include "kommunikacio.h"
+#include "szokezeles.h"
+#include "beolvasas.h"
 
 
 
@@ -31,7 +31,7 @@ int main()
     char puff[25];/*maximum 25 karakteres szavakat kezelek*/
     //fajl beolvasas
     FILE *fp;
-    fp = fopen("szavak.txt","rt"); /*létrehoztam magamnak egy txt-t 6 szóval, hogy egyszerűbb legyen a kódolás*/
+    fp = fopen("szotar.txt","rt"); /*létrehoztam magamnak egy txt-t */
     
     while (fscanf(fp, "%s",puff) != EOF) {
         if (strlen(puff) == betuszam) {
